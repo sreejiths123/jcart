@@ -1,0 +1,111 @@
+body{
+	background:url(../images/bg.jpg) fixed;
+	background-repeat:no-repeat;
+	color:#fff;
+	
+}
+.user-image{
+	width:30px;
+	height:30px;
+	border-radius:30px;
+	margin-right:5px;
+}
+.navbar-default{
+	background:none;
+	border: none;
+}
+.navbar-brand{
+	padding:20px;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+a {
+	color:#fff;
+}
+.sidebar ul li {
+	border-bottom: none;
+}
+.modal-content h4{
+	color:#333;
+}
+.modal-content{
+	color:#666;
+}
+@media (min-width: 768px){
+.sidebar {
+    margin-top: 60px;
+}
+#page-wrapper{
+	border-left: none;
+
+}
+}
+.sidebar ul li a.active {
+    background:rgba(0,0,0,.5);
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: rgba(0,0,0,.5);
+}
+#page-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+a:focus, a:hover {
+    color: #336699;
+    text-decoration: underline;
+}
+.navbar-top-links li a {
+    min-height: 55px;
+}
+#datetimepicker1{
+	color:#333;
+}
+.datepicker table {
+	color:#333;
+}
+#exTab3 .nav-pills > li > a {
+  border-radius: 4px 4px 0 0 ;
+}
+
+#exTab3 .tab-content {
+  	color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 0 5px 5px 5px;
+}
+
+.dropdown-menu{
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 0 0 4px 4px;
+}
+.table_but{
+	padding:0 5px 0 0;
+	color:#eee;
+}
+.table_but:hover{
+	color:#333;
+	text-decoration:none;
+	
+}
+.table_but:after{
+	content:normal;
+}
+.m20{
+	margin:20px;
+}
+.panel{
+	color:#fff;
+	background:none;
+}
+
+.panel-primary>.panel-heading{
+	background-color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.5);
+}
+.panel-primary{
+	border-color: rgba(0,0,0,.5);
+}
+.panel-footer {
+	background:none;
+	
+}

@@ -13,19 +13,19 @@
     <title>One Law1</title>
 
    
-    <link  th:href="@{/assets/css/bootstrap.min.css}" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"  rel="stylesheet"></link>
+    <link  th:href="@{/assets/css/bootstrap.min.css}"  rel="stylesheet"></link>
 
    
-    <link th:href="@{/dashboard/bower_components/metisMenu/dist/metisMenu.min.css}" href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet"></link>
+    <link th:href="@{/templates/dashboard/bower_components/metisMenu/dist/metisMenu.min.css}" href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet"></link>
     
-    <link th:href="@{/dashboard/dist/css/bootstrap-datepicker.css}" href="../dist/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css"></link>
+    <link th:href="@{/templates/dashboard/dist/css/bootstrap-datepicker.css}" href="../dist/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css"></link>
 
-    <link th:href="@{/dashboard/dist/css/sb-admin-2.css}" href="../dist/css/sb-admin-2.css" rel="stylesheet"></link>
+    <link th:href="@{/templates/dashboard/dist/css/sb-admin-2.css}" href="../dist/css/sb-admin-2.css" rel="stylesheet"></link>
 
-    <link  th:href="@{/dashboard/dist/css/style.css}"  href="../dist/css/style.css" rel="stylesheet"></link>
+    <link  th:href="@{/templates/dashboard/dist/css/style.css}"  href="../dist/css/style.css" rel="stylesheet"></link>
 
     
-    <link th:href="@{/dashboard/bower_components/font-awesome/css/font-awesome.min.css}" href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"></link>
+    <link th:href="@{/templates/dashboard/bower_components/font-awesome/css/font-awesome.min.css}" href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"></link>
 
 </head>
 
@@ -556,18 +556,18 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script th:src="@{/dashboard/bower_components/jquery/dist/jquery.min.js}" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script th:src="@{/dashboard/bower_components/bootstrap/dist/js/bootstrap.min.js}" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script  th:src="@{/dashboard/bower_components/metisMenu/dist/metisMenu.min.js}"  src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-	<script th:src="@{/dashboard/dist/js/bootstrap-datepicker.js}"  src="../dist/js/bootstrap-datepicker.js"></script>
+	<script src="../dist/js/bootstrap-datepicker.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script th:src="@{/dashboard/dist/js/sb-admin-2.js}"  src="../dist/js/sb-admin-2.js"></script>
+    <script src="../dist/js/sb-admin-2.js"></script>
 
 </body>
 
