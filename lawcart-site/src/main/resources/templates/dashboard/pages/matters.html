@@ -3,43 +3,33 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <meta name="description" content=""></meta>
+    <meta name="author" content=""></meta>
 
     <title>One Law</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link  th:href="@{/assets/css/bootstrap.min.css}" href="../bower_components/bootstrap/dist/css/bootstrap.min.css"  rel="stylesheet"></link>
 
-    <!-- MetisMenu CSS -->
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+   
+    <link th:href="@{/dashboard/bower_components/metisMenu/dist/metisMenu.min.css}" href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet"></link>
     
-    <!-- Calender--->
-    <link href="../dist/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css">
+    <link th:href="@{/dashboard/dist/css/bootstrap-datepicker.css}" href="../dist/css/bootstrap-datepicker.css" rel="stylesheet" type="text/css"></link>
 
-    <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../dist/css/style.css" rel="stylesheet">
+    <link th:href="@{/dashboard/dist/css/sb-admin-2.css}" href="../dist/css/sb-admin-2.css" rel="stylesheet"></link>
 
-    <!-- Custom Fonts -->
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link  th:href="@{/dashboard/dist/css/style.css}"  href="../dist/css/style.css" rel="stylesheet"></link>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    
+    <link th:href="@{/dashboard/bower_components/font-awesome/css/font-awesome.min.css}" href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"></link>    
 </head>
 
 <body>
 
     <div id="wrapper">
-
+  
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -252,7 +242,7 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <img src="../dist/images/user.jpg" class="user-image" alt="admin"> 
+                        <img src="../dist/images/user.jpg" class="user-image" alt="admin"></img> 
                         Sreejith
                     </a>
                     <ul class="dropdown-menu dropdown-user">
@@ -275,7 +265,7 @@
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
                             <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
+                                <input type="text" class="form-control" placeholder="Search..."></input>
                                 <span class="input-group-btn">
                                     <button class="btn btn-default" type="button">
                                         <i class="fa fa-search"></i>
@@ -347,7 +337,7 @@
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
-                <hr>
+                <hr/>
                 <div class="row">
                     <div class="col-sm-8">
                     	<a type="button" href="matters_new.html" class="btn btn btn-success" >New</a>
@@ -370,15 +360,15 @@
                                             <label>Export Range</label>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Export All
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""></input>Export All
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">Export Pages
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""></input>Export Pages
                                                 </label>
                                             </div>
-                                            <input class="form-control">
+                                            <input class="form-control"></input>
                                         </div>
                                   		<div class="form-group">
                                             <label>Output Format</label>
@@ -402,7 +392,7 @@
                     </div>
                     <div class="col-sm-4">
                     <div class="input-group date" id='datetimepicker1' data-provide="datepicker">
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control"></input>
                             <div class="input-group-addon">
                                 <span class="glyphicon glyphicon-th"></span>
                             </div>
@@ -414,7 +404,7 @@
 						</script>
                     </div>
                 </div>
-                <hr>
+                <hr/>
                 <div class="row">
                     <div class="">
                         
@@ -436,7 +426,7 @@
                                       			<table class="table table-sm">
                                                       <thead>
                                                         <tr>
-                                                          <th><input type="checkbox"></th>
+                                                          <th><input type="checkbox"></input></th>
                                                           <th>Display Number</th>
                                                           <th>Client</th>
                                                           <th>Practice Area</th>
@@ -444,9 +434,9 @@
                                                         </tr>
                                                       </thead>
                                                       <tbody>
-                                                      <!-- table Row --->
+                                                      
                                                         <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
                                                           <th scope="row">0001</th>
                                                           <td>Mark</td>
                                                           <td>Otto</td>
@@ -461,10 +451,9 @@
                                                           <a class="table_but" href="">Delete</a>
                                                           </td>
                                                         </tr>
-                                                        <!-- End table Row --->
-                                                        <!-- table Row --->
+                                                      
                                                         <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
                                                           <th scope="row">0002</th>
                                                           <td>Mark</td>
                                                           <td>Otto</td>
@@ -479,10 +468,9 @@
                                                           <a class="table_but" href="">Delete</a>
                                                           </td>
                                                         </tr>
-                                                        <!-- End table Row --->
-                                                        <!-- table Row --->
+                                                      
                                                         <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
                                                           <th scope="row">0003</th>
                                                           <td>Mark</td>
                                                           <td>Otto</td>
@@ -497,8 +485,7 @@
                                                           <a class="table_but" href="">Delete</a>
                                                           </td>
                                                         </tr>
-                                                        <!-- End table Row --->
-                                                        
+                                                       
                                                       </tbody>
                                                     </table>
                                       
@@ -508,7 +495,7 @@
                                       			<table class="table table-sm">
                                                       <thead>
                                                         <tr>
-                                                          <th><input type="checkbox"></th>
+                                                          <th><input type="checkbox"></input></th>
                                                           <th>Display Number</th>
                                                           <th>Client</th>
                                                           <th>Practice Area</th>
@@ -517,9 +504,9 @@
                                                         </tr>
                                                       </thead>
                                                       <tbody>
-                                                      <!-- table Row --->
+                                                      
                                                         <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
                                                           <th scope="row">0001</th>
                                                           <td>Mark</td>
                                                           <td>Otto</td>
@@ -535,10 +522,9 @@
                                                           <a class="table_but" href="">Delete</a>
                                                           </td>
                                                         </tr>
-                                                        <!-- End table Row --->
-                                                        <!-- table Row --->
+                                                       
                                                         <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
                                                           <th scope="row">0001</th>
                                                           <td>Mark</td>
                                                           <td>Otto</td>
@@ -554,10 +540,9 @@
                                                           <a class="table_but" href="">Delete</a>
                                                           </td>
                                                         </tr>
-                                                        <!-- End table Row --->
-                                                        <!-- table Row --->
+                                                        
                                                         <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
                                                           <th scope="row">0001</th>
                                                           <td>Mark</td>
                                                           <td>Otto</td>
@@ -573,7 +558,7 @@
                                                           <a class="table_but" href="">Delete</a>
                                                           </td>
                                                         </tr>
-                                                        <!-- End table Row --->
+                                                       
                                                         
                                                       </tbody>
                                                     </table>
@@ -584,7 +569,7 @@
                                     <table class="table table-sm">
                                                       <thead>
                                                         <tr>
-                                                          <th><input type="checkbox"></th>
+                                                          <th><input type="checkbox"></input></th>
                                                           <th>Display Number</th>
                                                           <th>Client</th>
                                                           <th>Practice Area</th>
@@ -592,9 +577,9 @@
                                                         </tr>
                                                       </thead>
                                                       <tbody>
-                                                      <!-- table Row --->
+                                                     
                                                         <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
                                                           <th scope="row">0001</th>
                                                           <td>Mark</td>
                                                           <td>Otto</td>
@@ -609,10 +594,9 @@
                                                           <a class="table_but" href="">Delete</a>
                                                           </td>
                                                         </tr>
-                                                        <!-- End table Row --->
-                                                        <!-- table Row --->
+                                                       
                                                         <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
                                                           <th scope="row">0002</th>
                                                           <td>Mark</td>
                                                           <td>Otto</td>
@@ -627,10 +611,9 @@
                                                           <a class="table_but" href="">Delete</a>
                                                           </td>
                                                         </tr>
-                                                        <!-- End table Row --->
-                                                        <!-- table Row --->
+                                                       
                                                         <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
                                                           <th scope="row">0003</th>
                                                           <td>Mark</td>
                                                           <td>Otto</td>
@@ -645,7 +628,7 @@
                                                           <a class="table_but" href="">Delete</a>
                                                           </td>
                                                         </tr>
-                                                        <!-- End table Row --->
+                                                      
                                                         
                                                       </tbody>
                                                     </table>
@@ -656,7 +639,7 @@
                                                 <table class="table table-sm">
                                                       <thead>
                                                         <tr>
-                                                          <th><input type="checkbox"></th>
+                                                          <th><input type="checkbox"></input></th>
                                                           <th>Display Number</th>
                                                           <th>Client</th>
                                                           <th>Practice Area</th>
@@ -665,9 +648,9 @@
                                                         </tr>
                                                       </thead>
                                                       <tbody>
-                                                      <!-- table Row --->
+                                                      
                                                         <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
                                                           <th scope="row">0001</th>
                                                           <td>Mark</td>
                                                           <td>Otto</td>
@@ -683,46 +666,43 @@
                                                           <a class="table_but" href="">Delete</a>
                                                           </td>
                                                         </tr>
-                                                        <!-- End table Row --->
-                                                        <!-- table Row --->
-                                                        <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
-                                                          <th scope="row">0001</th>
-                                                          <td>Mark</td>
-                                                          <td>Otto</td>
-                                                          <td>08/11/2016</td>
-                                                          <td>08/11/2016</td>
-                                                          </tr>
-                                                          <tr>
-                                                          <td colspan="5">
-                                                          <a class="table_but" href="">View</a>
-                                                          <a class="table_but" href="">Edit</a>
-                                                          <a class="table_but" href="">Add Task</a>
-                                                          <a class="table_but" href="">Quick Bill</a>
-                                                          <a class="table_but" href="">Delete</a>
-                                                          </td>
-                                                        </tr>
-                                                        <!-- End table Row --->
-                                                        <!-- table Row --->
-                                                        <tr>
-                                                        <th rowspan="2"><input type="checkbox"></th>
-                                                          <th scope="row">0001</th>
-                                                          <td>Mark</td>
-                                                          <td>Otto</td>
-                                                          <td>08/11/2016</td>
-                                                          <td>08/11/2016</td>
-                                                          </tr>
-                                                          <tr>
-                                                          <td colspan="5">
-                                                          <a class="table_but" href="">View</a>
-                                                          <a class="table_but" href="">Edit</a>
-                                                          <a class="table_but" href="">Add Task</a>
-                                                          <a class="table_but" href="">Quick Bill</a>
-                                                          <a class="table_but" href="">Delete</a>
-                                                          </td>
-                                                        </tr>
-                                                        <!-- End table Row --->
                                                         
+                                                        <tr>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
+                                                          <th scope="row">0001</th>
+                                                          <td>Mark</td>
+                                                          <td>Otto</td>
+                                                          <td>08/11/2016</td>
+                                                          <td>08/11/2016</td>
+                                                          </tr>
+                                                          <tr>
+                                                          <td colspan="5">
+                                                          <a class="table_but" href="">View</a>
+                                                          <a class="table_but" href="">Edit</a>
+                                                          <a class="table_but" href="">Add Task</a>
+                                                          <a class="table_but" href="">Quick Bill</a>
+                                                          <a class="table_but" href="">Delete</a>
+                                                          </td>
+                                                        </tr>
+                                                       
+                                                        <tr>
+                                                        <th rowspan="2"><input type="checkbox"></input></th>
+                                                          <th scope="row">0001</th>
+                                                          <td>Mark</td>
+                                                          <td>Otto</td>
+                                                          <td>08/11/2016</td>
+                                                          <td>08/11/2016</td>
+                                                          </tr>
+                                                          <tr>
+                                                          <td colspan="5">
+                                                          <a class="table_but" href="">View</a>
+                                                          <a class="table_but" href="">Edit</a>
+                                                          <a class="table_but" href="">Add Task</a>
+                                                          <a class="table_but" href="">Quick Bill</a>
+                                                          <a class="table_but" href="">Delete</a>
+                                                          </td>
+                                                        </tr>
+                                                       
                                                       </tbody>
                                                     </table>
                                                 
@@ -730,30 +710,28 @@
                                         </div>
                               </div>
                     </div>
-                    <!-- /.col-lg-12 -->
+                    
                 </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container-fluid -->
+               
+            </div>            
         </div>
-        <!-- /#page-wrapper -->
 
     </div>
-    <!-- /#wrapper -->
+   
 
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+     <script th:src="@{/dashboard/bower_components/jquery/dist/jquery.min.js}" src="../bower_components/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script th:src="@{/dashboard/bower_components/bootstrap/dist/js/bootstrap.min.js}" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script  th:src="@{/dashboard/bower_components/metisMenu/dist/metisMenu.min.js}"  src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
 
-	<script src="../dist/js/bootstrap-datepicker.js"></script>
+	<script th:src="@{/dashboard/dist/js/bootstrap-datepicker.js}"  src="../dist/js/bootstrap-datepicker.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+    <script th:href="@{/dashboard/dist/js/sb-admin-2.js}"  src="../dist/js/sb-admin-2.js"></script>
+
 
 </body>
 

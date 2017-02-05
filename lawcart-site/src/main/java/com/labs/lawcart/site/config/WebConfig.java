@@ -51,6 +51,9 @@ public class WebConfig extends WebMvcConfigurerAdapter
 		registry.addViewController("/register").setViewName("register");
 		registry.addViewController("/myDashboard").setViewName("redirect:/dashboard/pages/");
 	    registry.addViewController("/myDashboard/").setViewName("forward:/dashboard/pages/index.html");
+	    registry.addViewController("/matters").setViewName("redirect:/dashboard/pages/matters.html");
+	    registry.addViewController("/matters/").setViewName("forward:/dashboard/pages/matters.html");
+	    
 		registry.addRedirectViewController("/", "/home");
 
 	}

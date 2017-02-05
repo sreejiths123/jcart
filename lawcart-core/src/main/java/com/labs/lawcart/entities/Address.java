@@ -9,6 +9,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -28,6 +30,10 @@ public class Address  implements Serializable
 	private String state;
 	private String zipCode;
 	private String country;
+	
+	@ManyToOne
+	@JoinColumn(name="contact_id")
+	private Contact contact;
 	
 	public Integer getId()
 	{
@@ -85,5 +91,13 @@ public class Address  implements Serializable
 	{
 		this.country = country;
 	}
+	public Contact getContact() {
+		return contact;
+	}
+	public void setContact(Contact contact) {
+		this.contact = contact;
+	}
+	
+	
 	
 }

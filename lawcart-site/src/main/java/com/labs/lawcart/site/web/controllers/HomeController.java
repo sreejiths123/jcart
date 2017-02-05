@@ -71,4 +71,5 @@ public class HomeController extends LawCartSiteBaseController
 		return "category";
 	}
 	
+	
 }

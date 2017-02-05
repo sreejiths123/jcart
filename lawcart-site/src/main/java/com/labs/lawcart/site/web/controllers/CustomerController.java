@@ -88,4 +88,13 @@ public class CustomerController extends LawCartSiteBaseController
 		model.addAttribute("orders", orders);
 		return "dashboard/pages/index";
 	}
+	
+
+	@RequestMapping("/matters")
+	public String matters( Model model)
+	{
+		//Category category = catalogService.getCategoryByName(name);
+		//model.addAttribute("category", category);
+		return "dashboard/pages/matters";
+	}
 }
