@@ -19,6 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.labs.lawcart.customers.CustomerService;
 import com.labs.lawcart.entities.Customer;
+import com.labs.lawcart.entities.Matter;
 import com.labs.lawcart.entities.Order;
 import com.labs.lawcart.site.web.validators.CustomerValidator;
 
@@ -77,24 +78,4 @@ public class CustomerController extends LawCartSiteBaseController
 		return "myAccount";
 	}
 	
-
-	@RequestMapping(value="/myDashboard", method=RequestMethod.GET)
-	protected String myDashboard(Model model)
-	{
-		String email = getCurrentUser().getCustomer().getEmail();
-		Customer customer = customerService.getCustomerByEmail(email);
-		model.addAttribute("customer", customer);
-		List<Order> orders = customerService.getCustomerOrders(email);
-		model.addAttribute("orders", orders);
-		return "dashboard/pages/index";
-	}
-	
-
-	@RequestMapping("/matters")
-	public String matters( Model model)
-	{
-		//Category category = catalogService.getCategoryByName(name);
-		//model.addAttribute("category", category);
-		return "dashboard/pages/matters";
-	}
 }

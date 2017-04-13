@@ -14,7 +14,7 @@ public class AuthenticatedUser extends org.springframework.security.core.userdet
 {
 
 	private static final long serialVersionUID = 1L;
-	private Customer customer;
+	private Customer customer; 
 	
 	public AuthenticatedUser(Customer customer)
 	{

@@ -29,7 +29,7 @@ import com.labs.lawcart.entities.Product;
 public class HomeController extends LawCartSiteBaseController
 {	
 	@Autowired
-	private CatalogService catalogService;
+	private CatalogService catalogService; 
 	
 	@Override
 	protected String getHeaderTitle()
