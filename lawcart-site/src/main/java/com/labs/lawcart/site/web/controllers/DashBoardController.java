@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -18,12 +19,14 @@ import com.labs.lawcart.customers.CustomerService;
 import com.labs.lawcart.entities.Customer;
 import com.labs.lawcart.entities.Matter;
 import com.labs.lawcart.entities.Order;
+import com.labs.lawcart.matter.MatterService;
 
 @Controller
 public class DashBoardController extends LawCartSiteBaseController{
 
 
 	@Autowired private CustomerService customerService;
+	@Autowired private MatterService matterService;
 	@Autowired protected PasswordEncoder passwordEncoder;
 	
 	@Override
@@ -49,6 +52,7 @@ public class DashBoardController extends LawCartSiteBaseController{
 	{
 		//Category category = catalogService.getCategoryByName(name);
 		//model.addAttribute("category", category);
+		model.addAttribute("matters",matterService.getAllMatters());
 		return "dashboard/pages/matters";
 	}
 	
@@ -66,8 +70,16 @@ public class DashBoardController extends LawCartSiteBaseController{
 			Model model, RedirectAttributes redirectAttributes)
 	{
 		
-		
+		matterService.createMatter(matter);
 		
 		return "dashboard/pages/matters";
+	}
+	
+	@RequestMapping(value="/matters/{matterId}", method=RequestMethod.GET)
+	public String viewOrder(@PathVariable(value="matterId")Integer matterId, Model model)
+	{
+		Matter matter = matterService.getMatter(matterId);
+		model.addAttribute("matter", matter);
+		return "dashboard/pages/edit_matter";
 	}
 }

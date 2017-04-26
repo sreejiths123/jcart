@@ -104,7 +104,7 @@
 
 					<div class="tab-content clearfix">
 						<div class="tab-pane active" id="1b">
-							<table class="table table-sm">
+							<table class="table table-sm" >
 								<thead>
 									<tr>
 										<th><input type="checkbox"></input></th>
@@ -114,57 +114,28 @@
 										<th>Open Date</th>
 									</tr>
 								</thead>
-								<tbody>
-
+								<tbody th:each="mat : ${matters}">
+									
 									<tr>
 										<th rowspan="2"><input type="checkbox"></input></th>
-										<th scope="row">0001</th>
+										<th scope="row"><div th:text="${mat.id}">$9.00</div></th>
 										<td>Mark</td>
 										<td>Otto</td>
-										<td>08/11/2016</td>
+										<td><div th:text="${mat.openDate}"></div></td>
 									</tr>
 									<tr>
-										<td colspan="4"><a class="table_but" href="">View</a> <a
+										<td colspan="4"><a class="table_but" th:href="@{/matters/{matterId}(matterId=${mat.id})}" href="">View</a> <a
 											class="table_but" href="">Edit</a> <a class="table_but"
 											href="">Add Task</a> <a class="table_but" href="">Quick
 												Bill</a> <a class="table_but" href="">Delete</a></td>
 									</tr>
-
-									<tr>
-										<th rowspan="2"><input type="checkbox"></input></th>
-										<th scope="row">0002</th>
-										<td>Mark</td>
-										<td>Otto</td>
-										<td>08/12/2016</td>
-									</tr>
-									<tr>
-										<td colspan="4"><a class="table_but" href="">View</a> <a
-											class="table_but" href="">Edit</a> <a class="table_but"
-											href="">Add Task</a> <a class="table_but" href="">Quick
-												Bill</a> <a class="table_but" href="">Delete</a></td>
-									</tr>
-
-									<tr>
-										<th rowspan="2"><input type="checkbox"></input></th>
-										<th scope="row">0003</th>
-										<td>Mark</td>
-										<td>Otto</td>
-										<td>08/13/2016</td>
-									</tr>
-									<tr>
-										<td colspan="4"><a class="table_but" href="">View</a> <a
-											class="table_but" href="">Edit</a> <a class="table_but"
-											href="">Add Task</a> <a class="table_but" href="">Quick
-												Bill</a> <a class="table_but" href="">Delete</a></td>
-									</tr>
-
 								</tbody>
 							</table>
 
 						</div>
 						<div class="tab-pane" id="2b">
 
-							<table class="table table-sm">
+							<table class="table table-sm" >
 								<thead>
 									<tr>
 										<th><input type="checkbox"></input></th>
