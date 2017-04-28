@@ -10,7 +10,7 @@
     	<div layout:fragment="content">
 	   			<div class="row">
 	                   <div class="col-sm-8">
-	                       <h1>Create New Matter</h1>
+	                       <h1>Edit Matter</h1>
 	                   </div>
 	                   <div class="col-sm-4">
 	                       <div class="input-group date m20" id='datetimepicker1' data-provide="datepicker">
@@ -29,7 +29,7 @@
 	               </div>
 	              
 	               <hr></hr>
-	               <form id="CreateMatter"  th:action="@{/matters/new}" th:object="${matter}" method="post">
+	               <form id="CreateMatter"  th:action="@{/matters/{matterId}(matterId=${matter.id})}" th:object="${matter}" method="post">
 	               <div class="row">
 	                  <div class="col-sm-6">
 	                  		<div class="panel panel-default">
