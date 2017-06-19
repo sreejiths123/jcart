@@ -10,6 +10,7 @@ import com.labs.lawcart.LawCartException;
 import com.labs.lawcart.entities.Category;
 import com.labs.lawcart.entities.Matter;
 import com.labs.lawcart.entities.Order;
+import com.labs.lawcart.entities.Product;
 
 
 @Service
@@ -34,11 +35,32 @@ public class MatterService {
 	}
 
 
-	public Matter getMatter(Integer matterId) {
+	public Matter getMatterById(Integer matterId) {
 	    
 		if(matterId !=null){
 			return matterRepository.getOne(matterId);
 		}else throw new LawCartException("Error while retrieving Matter...");
+		
+	}
+
+
+	public Matter updateMatter(Matter matter) {
+		Matter persistedMatter = getMatterById(matter.getId());
+		if(persistedMatter == null){
+			throw new LawCartException("Product "+matter.getId()+" doesn't exist");
+		}
+		persistedMatter.setDescription(matter.getDescription());
+		persistedMatter.setClientReferenceNo(matter.getClientReferenceNo());
+		persistedMatter.setCloseDate(matter.getCloseDate());
+		persistedMatter.setLocation(matter.getLocation());
+		persistedMatter.setOpenDate(matter.getOpenDate());
+		persistedMatter.setPendingDate(matter.getPendingDate());
+		persistedMatter.setPracticeArea(matter.getPracticeArea());
+		persistedMatter.setResponsibleAttorney(matter.getResponsibleAttorney());
+		persistedMatter.setStatus(matter.getStatus());
+		persistedMatter.setUser(matter.getUser());
+		
+		return matterRepository.save(persistedMatter);
 		
 	}
 }
