@@ -16,11 +16,19 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
+import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.thymeleaf.extras.springsecurity4.dialect.SpringSecurityDialect;
+import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.resourceresolver.SpringResourceResourceResolver;
+import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+import org.thymeleaf.templatemode.StandardTemplateModeHandlers;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
+import org.thymeleaf.templateresolver.ITemplateResolver;
+import org.thymeleaf.templateresolver.TemplateResolver;
 
 /**
  * @author Siva
@@ -72,12 +80,60 @@ public class WebConfig extends WebMvcConfigurerAdapter
 		ClassLoaderTemplateResolver emailTemplateResolver = new ClassLoaderTemplateResolver();
 		emailTemplateResolver.setPrefix("email-templates/");
 		emailTemplateResolver.setSuffix(".html");
-		emailTemplateResolver.setTemplateMode("HTML5");
+		//https://stackoverflow.com/questions/28624768/thymeleaf-strict-html-parsing-issue
+		//emailTemplateResolver.setTemplateMode("HTML5");
+		emailTemplateResolver.setTemplateMode("LEGACYHTML5");
+		emailTemplateResolver.setCacheable(false);  // new 
 		emailTemplateResolver.setCharacterEncoding("UTF-8");
 		emailTemplateResolver.setOrder(2);
 
 		return emailTemplateResolver;
 	}
+	/**
+	 * templateResolver ,thymeleafResourceResolver,templateEngine,viewResolver are newly added to maitain legacy html , otherwise not required
+	 * @return
+	 */
+	@Bean 
+	public ITemplateResolver templateResolver() { 
+	        TemplateResolver resolver = new TemplateResolver(); 
+	        resolver.setResourceResolver(thymeleafResourceResolver()); 
+	       // resolver.setPrefix(this.environment.getProperty("prefix", DEFAULT_PREFIX)); 
+	        resolver.setPrefix("classpath:/templates/");
+	        resolver.setSuffix(".html"); 
+	        resolver.setTemplateMode(StandardTemplateModeHandlers.LEGACYHTML5.getTemplateModeName()); 
+	        resolver.setCharacterEncoding("UTF-8"); 
+	        resolver.setCacheable(false); 
+	        return resolver; 
+	} 
+	
+	@Bean
+	public SpringResourceResourceResolver thymeleafResourceResolver() {
+		return new SpringResourceResourceResolver();
+	}
+	
+	public SpringTemplateEngine templateEngine() {
+		SpringTemplateEngine engine = new SpringTemplateEngine();
+		engine.setTemplateResolver(templateResolver());
+		return engine;
+	}
+
+	@Bean
+	public ViewResolver viewResolver() {
+		ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
+		viewResolver.setTemplateEngine(templateEngine());
+		viewResolver.setOrder(1);
+		viewResolver.setViewNames(new String[] { "*" });
+		viewResolver.setCache(false);
+		return viewResolver;
+	}
+	
+	
+	 @Override
+	    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+	        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
+	        registry.addResourceHandler("/**").addResourceLocations("classpath:/templates/");
+	        super.addResourceHandlers(registry);
+	    }
 
 	@Bean
 	public SpringSecurityDialect securityDialect()
